@@ -32,12 +32,6 @@ To use **EndpointRegistry** in your Spring Boot project, add the following depen
 
 ## ⚙️ Configuration
 
-Configure **EndpointRegistry** with the necessary properties in your project’s `application.properties` file.
-
-```properties
-endpoint.registry.enabled=true
-```
-
 ### Integration with Spring Boot
 
 To use this library, simply annotate your controller methods with `@EndPointDescription`, as shown in the following example:
@@ -45,18 +39,45 @@ To use this library, simply annotate your controller methods with `@EndPointDesc
 ```java
 import com.luigivismara.endpointregistry.annotations.EndPointDescription;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MyController {
+@RequestMapping("/example")
+public class ExampleController {
 
-    @GetMapping("/example")
+    @GetMapping("/test")
     @EndPointDescription("This is a test endpoint")
-    public String example() {
+    public String test() {
         return "Hello World";
     }
 }
 ```
+
+### Component Scanning for Library Detection
+
+If you find that **EndpointRegistry** is not detecting endpoints automatically, ensure that Spring Boot is scanning the appropriate packages. Here are some ways to enable component scanning:
+
+1. **Place the Main Class in a Root Package**: Ensure that your main application class (annotated with `@SpringBootApplication`) is in a root package that includes both your application code and the library packages as subpackages. This will allow Spring Boot to scan all components automatically.
+
+2. **Add a Separate Configuration for Component Scanning**: Alternatively, you can add a configuration class in your project to explicitly include the library package for scanning:
+
+   ```java
+   package com.yourapp.config;
+
+   import org.springframework.context.annotation.ComponentScan;
+   import org.springframework.context.annotation.Configuration;
+
+   @Configuration
+   @ComponentScan(basePackages = {
+       "com.luigivismara.endpointregistry",
+       "com.yourapp.controllers" // Adjust this to your controller package
+   })
+   public class EndpointRegistryConfig {
+   }
+   ```
+
+By using one of these approaches, you ensure that **EndpointRegistry** and your controllers are automatically scanned by Spring Boot.
 
 ## 📖 Usage Examples
 

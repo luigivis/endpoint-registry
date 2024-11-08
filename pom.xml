@@ -10,12 +10,12 @@
     </parent>
 
     <groupId>com.luigivismara</groupId>
-    <artifactId>endpointRegistry-registry</artifactId>
-    <version>1.1.0</version>
+    <artifactId>endpoint-registry</artifactId>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
     <name>EndpointRegistry</name>
     <description>Spring Boot library to automatically register and manage endpoints in a database</description>
-    <url>https://github.com/luigivismara/endpointRegistry-registry</url>
+    <url>https://github.com/luigivismara/endpoint-registry</url>
 
     <licenses>
         <license>
@@ -34,9 +34,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/luigivis/endpointRegistry-registry.git</connection>
-        <developerConnection>scm:git:ssh://github.com:luigivis/endpointRegistry-registry.git</developerConnection>
-        <url>https://github.com/luigivis/endpointRegistry-registry</url>
+        <connection>scm:git:git://github.com/luigivis/endpoint-registry.git</connection>
+        <developerConnection>scm:git:ssh://github.com:luigivis/endpoint-registry.git</developerConnection>
+        <url>https://github.com/luigivis/endpoint-registry</url>
     </scm>
 
     <properties>

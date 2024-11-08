@@ -1,6 +1,6 @@
 package com.luigivismara.endpointregistry.dao;
 
-import com.luigivismara.endpointregistry.dto.Endpoint;
+import com.luigivismara.endpointregistry.dto.EndpointRegistry;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -17,11 +17,11 @@ public class EndpointDao {
 
     /**
      * Save into table endpoints
-     * @param endpoint Objects
+     * @param endpointRegistry Objects
      */
-    public void save(Endpoint endpoint) {
+    public void save(EndpointRegistry endpointRegistry) {
         var sql = "INSERT INTO endpoints (url, http_method, description) VALUES (?, ?, ?)";
         System.out.println("Query -> " + sql);
-        jdbcTemplate.update(sql, endpoint.url(), endpoint.httpMethod(), endpoint.description());
+        jdbcTemplate.update(sql, endpointRegistry.getUrl(), endpointRegistry.getHttpMethod(), endpointRegistry.getDescription());
     }
 }

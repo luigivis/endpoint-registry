@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.luigivismara</groupId>
-    <artifactId>example-endpoint-registry</artifactId>
+    <artifactId>example-endpointRegistry-registry</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>example-endpoint-registry</name>
-    <description>example-endpoint-registry</description>
+    <name>example-endpointRegistry-registry</name>
+    <description>example-endpointRegistry-registry</description>
     <url/>
     <licenses>
         <license/>
@@ -57,7 +57,7 @@
 
         <dependency>
             <groupId>com.luigivismara</groupId>
-            <artifactId>endpoint-registry</artifactId>
+            <artifactId>endpointRegistry-registry</artifactId>
             <version>1.0.0</version>
         </dependency>
     </dependencies>

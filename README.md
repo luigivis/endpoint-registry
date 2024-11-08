@@ -1,15 +1,15 @@
 # 📚 EndpointRegistry
 
-![GitHub](https://img.shields.io/github/license/luigivismara/endpoint-registry)
-![GitHub last commit](https://img.shields.io/github/last-commit/luigivismara/endpoint-registry)
-![GitHub issues](https://img.shields.io/github/issues/luigivismara/endpoint-registry)
+![GitHub](https://img.shields.io/github/license/luigivismara/endpointRegistry-registry)
+![GitHub last commit](https://img.shields.io/github/last-commit/luigivismara/endpointRegistry-registry)
+![GitHub issues](https://img.shields.io/github/issues/luigivismara/endpointRegistry-registry)
 
-**EndpointRegistry** is a Spring Boot library designed to automatically register and manage application endpoints, storing their descriptions and details in a database. This library is perfect for projects needing centralized API documentation, endpoint auditing, or integration with monitoring systems.
+**EndpointRegistry** is a Spring Boot library designed to automatically register and manage application endpoints, storing their descriptions and details in a database. This library is perfect for projects needing centralized API documentation, endpointRegistry auditing, or integration with monitoring systems.
 
 ## 🚀 Features
 
-- Automatic endpoint registration with custom annotations.
-- Stores metadata for each endpoint in a database.
+- Automatic endpointRegistry registration with custom annotations.
+- Stores metadata for each endpointRegistry in a database.
 - Simple integration with Spring Boot projects.
 - Ideal for automated API documentation generation.
 
@@ -20,7 +20,7 @@ To use **EndpointRegistry** in your Spring Boot project, add the following depen
 ```xml
 <dependency>
     <groupId>com.luigivismara</groupId>
-    <artifactId>endpoint-registry</artifactId>
+    <artifactId>endpointRegistry-registry</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
@@ -47,7 +47,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExampleController {
 
     @GetMapping("/test")
-    @EndPointDescription("This is a test endpoint")
+    @EndPointDescription("This is a test endpointRegistry")
     public String test() {
         return "Hello World";
     }
@@ -83,14 +83,14 @@ By using one of these approaches, you ensure that **EndpointRegistry** and your 
 
 ### Basic Example
 
-This example shows how to register a simple endpoint with a description.
+This example shows how to register a simple endpointRegistry with a description.
 
 ```java
 @RestController
 public class ExampleController {
 
     @GetMapping("/simple")
-    @EndPointDescription("Simple example endpoint")
+    @EndPointDescription("Simple example endpointRegistry")
     public String simpleEndpoint() {
         return "Endpoint successfully registered";
     }

@@ -2,7 +2,7 @@ package com.luigivismara.endpointregistry;
 
 import com.luigivismara.endpointregistry.annotations.EndPointDescription;
 import com.luigivismara.endpointregistry.dao.EndpointDao;
-import com.luigivismara.endpointregistry.dto.Endpoint;
+import com.luigivismara.endpointregistry.dto.EndpointRegistry;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
@@ -39,7 +39,7 @@ public class EndpointScanner {
                 var url = mappingInfo.getPathPatternsCondition().getPatterns().iterator().next().toString();
                 var httpMethod = mappingInfo.getMethodsCondition().getMethods().iterator().next().toString();
 
-                var endpoint = new Endpoint(url, httpMethod, descriptionAnnotation.value());
+                var endpoint = new EndpointRegistry(url, httpMethod, descriptionAnnotation.value());
                 System.out.println("Endpoint try to save -> " + endpoint);
                 endpointDao.save(endpoint);
             }

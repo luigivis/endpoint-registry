@@ -11,7 +11,7 @@
 
     <groupId>com.luigivismara</groupId>
     <artifactId>endpointRegistry-registry</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
     <name>EndpointRegistry</name>
     <description>Spring Boot library to automatically register and manage endpoints in a database</description>
